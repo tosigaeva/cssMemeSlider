@@ -65,3 +65,59 @@ body {
   text-align: left;
   text-transform: uppercase;
 }
+
+.dots {
+  grid-area: dots;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dots label {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50px;
+  background-color: #6098fe;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.dots label:hover {
+  background-color: #ffffff;
+}
+
+#radio-1:checked ~ .slides .slides-wrapper,
+#radio-1:checked ~ .captions .captions-wrapper {
+  margin-left: 0;
+}
+
+#radio-2:checked ~ .slides .slides-wrapper,
+#radio-2:checked ~ .captions .captions-wrapper {
+  margin-left: -100%;
+}
+
+#radio-3:checked ~ .slides .slides-wrapper,
+#radio-3:checked ~ .captions .captions-wrapper {
+  margin-left: -200%;
+}
+
+#radio-4:checked ~ .slides .slides-wrapper,
+#radio-4:checked ~ .captions .captions-wrapper {
+  margin-left: -300%;
+}
+
+#radio-1:checked ~ .dots #label-1,
+#radio-2:checked ~ .dots #label-2,
+#radio-3:checked ~ .dots #label-3,
+#radio-4:checked ~ .dots #label-4 {
+  border: 0.125rem solid #6098fe;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+#radio-1:checked ~ .dots #label-1:hover,
+#radio-2:checked ~ .dots #label-2:hover,
+#radio-3:checked ~ .dots #label-3:hover,
+#radio-4:checked ~ .dots #label-4:hover {
+  border-color: #ffffff;
+}
