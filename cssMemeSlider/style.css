@@ -17,7 +17,6 @@ body {
   max-width: 100%;
   text-align: center;
   display: grid;
-  grid-template-rows: 3fr 1fr;
   grid-template-columns: 3fr 1fr;
   grid-template-areas: 'slides slides' 'captions dots';
   row-gap: 2rem;
@@ -70,20 +69,30 @@ body {
   grid-area: dots;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .dots label {
-  width: 1.25rem;
-  height: 1.25rem;
-  border-radius: 50px;
-  background-color: #6098fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
   cursor: pointer;
   transition: 0.5s ease;
 }
 
-.dots label:hover {
+.dots label:hover .dot {
   background-color: #ffffff;
+}
+
+.dot {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: #6098fe;
 }
 
 #radio-1:checked ~ .slides .slides-wrapper,
@@ -106,19 +115,19 @@ body {
   margin-left: -300%;
 }
 
-#radio-1:checked ~ .dots #label-1,
-#radio-2:checked ~ .dots #label-2,
-#radio-3:checked ~ .dots #label-3,
-#radio-4:checked ~ .dots #label-4 {
+#radio-1:checked ~ .dots #label-1 .dot,
+#radio-2:checked ~ .dots #label-2 .dot,
+#radio-3:checked ~ .dots #label-3 .dot,
+#radio-4:checked ~ .dots #label-4 .dot {
   border: 0.125rem solid #6098fe;
   background: transparent;
   transition: background 0.3s ease;
 }
 
-#radio-1:checked ~ .dots #label-1:hover,
-#radio-2:checked ~ .dots #label-2:hover,
-#radio-3:checked ~ .dots #label-3:hover,
-#radio-4:checked ~ .dots #label-4:hover {
+#radio-1:checked ~ .dots #label-1:hover .dot,
+#radio-2:checked ~ .dots #label-2:hover .dot,
+#radio-3:checked ~ .dots #label-3:hover .dot,
+#radio-4:checked ~ .dots #label-4:hover .dot {
   border-color: #ffffff;
 }
 
