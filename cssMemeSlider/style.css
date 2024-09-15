@@ -121,3 +121,20 @@ body {
 #radio-4:checked ~ .dots #label-4:hover {
   border-color: #ffffff;
 }
+
+@media (max-width: 560px) {
+  .slider {
+    display: grid;
+    grid-template-rows: 3fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: 'slides' 'dots' 'captions';
+  }
+
+  .slides img {
+    padding: 0 2%;
+  }
+
+  .caption {
+    text-align: center;
+  }
+}
