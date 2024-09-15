@@ -7,6 +7,36 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"></div>
+    <div class="slider">
+      <input type="radio" name="images" id="radio-1" checked />
+      <input type="radio" name="images" id="radio-2" />
+      <input type="radio" name="images" id="radio-3" />
+      <input type="radio" name="images" id="radio-4" />
+
+      <div class="slides">
+        <div class="slides-wrapper">
+          <img src="assets/images/1.png" id="slide-1" />
+          <img src="assets/images/2.jpg" id="slide-2" />
+          <img src="assets/images/3.jpg" id="slide-3" />
+          <img src="assets/images/4.jpg" id="slide-4" />
+        </div>
+      </div>
+
+      <div class="captions">
+        <div class="captions-wrapper">
+          <div class="caption" id="slide-1">Тюль для Пашки милашки</div>
+          <div class="caption" id="slide-2">Психо слог</div>
+          <div class="caption" id="slide-3">Каратель</div>
+          <div class="caption" id="slide-4">Люби люлей</div>
+        </div>
+      </div>
+
+      <div class="dots">
+        <label for="radio-1" id="label-1"></label>
+        <label for="radio-2" id="label-2"></label>
+        <label for="radio-3" id="label-3"></label>
+        <label for="radio-4" id="label-4"></label>
+      </div>
+    </div>
   </body>
 </html>
